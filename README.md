@@ -35,7 +35,7 @@ app.rb
 
     TicTacToe: htpp://localhost:4567
     
-    Heroku: http://tictactoe-stw1314.herokuapp.com/
+    Heroku: 
 
 ## DESARROLLADOR ##
 
