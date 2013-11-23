@@ -1,0 +1,27 @@
+.button
+  %a{:href=>"/usuarios"}
+    RANKING
+.header
+  -if (!usuario)
+    %form{:action=>"/",:method=>"post"}
+      USUARIO:
+      %input{:type=>"text",:name=>"usuario[username]",:placeholder=>"USUARIO"}
+      %input{:type=>"hidden",:name=>"usuario[partidas_ganadas]",:value=>"0"}
+      %input{:type=>"hidden",:name=>"usuario[partidas_perdidas]",:value=>"0"}
+      %input{:type=>"hidden",:name=>"usuario[partidas_jugadas]",:value=>"0"}
+      %input{:type=>"submit",:value=>"ENVIAR"}
+  -else
+    %form{:action=>"/",:method=>"post"}
+      Hola, #{usuario}
+      %input{:type=>"hidden",:value=>"1",:name=>"logout"}
+      %input{:type=>"submit",:value=>"LOGOUT"}
+    
+.screen 
+  .gameboard
+    - HORIZONTALS.each do |row| 
+      .gamerow
+        - row.each do |p|
+          %a(href=p)
+            %div{:id => "#{p}", :class => "cell #{b[p]}"}
+    .message
+      %h1= m

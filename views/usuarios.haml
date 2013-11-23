@@ -1,0 +1,42 @@
+.button
+        %a{:href=>"/"}
+                JUEGO
+.message
+        %br
+        %br
+        %br
+        %br
+        %br
+        %br
+        %br
+        %br
+        %center
+                %h3 RANKING
+                %table
+                        %tr
+                                %th Nombre
+                                %th
+                                %th
+                                %th Ganadas
+                                %th
+                                %th
+                                %th Perdidas
+                                %th
+                                %th
+                                %th Jugadas
+                        - @usuarios.sort_by {|k, v| v}.reverse.each do |usuario| 
+                                %tr
+                                        %td
+                                                #{usuario.username}
+                                        %td
+                                        %td
+                                        %td
+                                                #{usuario.partidas_ganadas}
+                                        %td
+                                        %td
+                                        %td        
+                                                #{usuario.partidas_perdidas}
+                                        %td
+                                        %td
+                                        %td        
+                                                #{usuario.partidas_jugadas}

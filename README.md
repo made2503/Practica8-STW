@@ -5,15 +5,15 @@ TicTacToe
 
 **Paso 1.** Cogemos la práctica `tictactoe` 
 
-**Paso 2.** Crearemos la BBDD con DataMapper, para ello creamos el fichero `usuarios.rb` donde tendremos el modelo de la BBDD.
+**Paso 2.** 
 
-**Paso 3.** En `app.rb` crearemos la BBDD y la guardaremos en `development.db`
+**Paso 3.** 
 
-**Paso 4.** Una vez hecho esto, en el mismo fichero `app.rb` se guardarán las partidas jugadas, ganadas y perdidas del usuario creado.
+**Paso 4.** 
 
-**Paso 5.** Crearemos las vistas del Ranking en `views/usuarios.haml`
+**Paso 5.** 
 
-**Paso 6.** Para modificar la apariencia simplemente tenemos que ir a `styles.scss`
+**Paso 6.** 
 
 
 ##IMPORTANTE##
