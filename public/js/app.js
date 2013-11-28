@@ -1,8 +1,7 @@
 $(document).ready(function(){
     $(".cell").click(function(event) {
-        alert("ESTOY AQUI")
         var pathname = window.location.pathname;
-        var ruta =pathname + event.target.id;
+        var ruta = pathname + event.target.id;
         $.get(ruta, function(data) {
             if (data == 'illegal'){
                 alert("Illegal move!")
