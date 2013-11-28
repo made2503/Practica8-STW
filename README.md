@@ -5,16 +5,11 @@ TicTacToe
 
 **Paso 1.** Cogemos la práctica `tictactoe` 
 
-**Paso 2.** 
+**Paso 2.** Añadimos en `js/ajax.js`el código javascript para jugar.
 
-**Paso 3.** 
+**Paso 3.** En `app.rb` indicamos donde tiene que coger la plantilla del juego y cuando se genere una jugada lo que tiene que retornar.
 
-**Paso 4.** 
-
-**Paso 5.** 
-
-**Paso 6.** 
-
+**Paso 4.** Mejoramos el Sass
 
 ##IMPORTANTE##
 
@@ -35,7 +30,7 @@ app.rb
 
     TicTacToe: htpp://localhost:4567
     
-    Heroku: 
+    Heroku: http://tictactoeajax.herokuapp.com/
 
 ## DESARROLLADOR ##
 
