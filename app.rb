@@ -157,7 +157,7 @@ end
 
 get %r{^/([abc][123])?$} do |human|
   if human then
-    puts "You played: #{human}!"
+    puts "Jugada: #{human}!"
     puts "session: "
     pp session
     if legal_moves.include? human
@@ -167,7 +167,7 @@ get %r{^/([abc][123])?$} do |human|
       return '/humanwins' if human_wins?
       return '/tie' unless computer
       board[computer] = TicTacToe::CROSS
-      puts "I played: #{computer}!"
+      puts "Juego: #{computer}!"
       puts "Tablero:  #{board.inspect}"
       return '/computerwins' if computer_wins?
       result = computer
