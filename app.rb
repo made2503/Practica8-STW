@@ -3,6 +3,7 @@ require 'sass'
 require 'pp'
 require 'haml'
 require './usuarios.rb'
+require 'rubygems'
 
 settings.port = ENV['PORT'] || 4567
 #enable :sessions
@@ -156,26 +157,29 @@ end
 
 get %r{^/([abc][123])?$} do |human|
   if human then
-    puts "Juegas: #{human}!"
+    puts "You played: #{human}!"
     puts "session: "
     pp session
     if legal_moves.include? human
       board[human] = TicTacToe::CIRCLE
       # computer = board.legal_moves.sample
       computer = smart_move
-      redirect to ('/humanwins') if human_wins?
-      redirect to('/tie') unless computer
+      return '/humanwins' if human_wins?
+      return '/tie' unless computer
       board[computer] = TicTacToe::CROSS
-      puts "Juego: #{computer}!"
+      puts "I played: #{computer}!"
       puts "Tablero:  #{board.inspect}"
-      redirect to ('/computerwins') if computer_wins?
+      return '/computerwins' if computer_wins?
+      result = computer
     end
   else
     session["bs"] = inicializa()
     puts "session = "
     pp session
+    result = "illegal"
   end
-  resultado
+  puts result
+  result
 end
 
 get '/humanwins' do
@@ -269,6 +273,7 @@ post '/' do
   end
     redirect '/'
 end
+
 
 not_found do
   puts "not found!!!!!!!!!!!"
