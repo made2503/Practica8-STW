@@ -12,7 +12,7 @@ $(document).ready(function(){
                     $("#"+data).addClass( "cross" );
                 }
                 else{
-                    alert("Casilla Ocupada, escoja otra");
+                    alert("Casilla Ocupada, Escoja Otra");
                 }
             }
             else{
