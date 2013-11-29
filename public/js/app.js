@@ -15,12 +15,6 @@ $(document).ready(function(){
                     alert("Casilla Ocupada, escoja otra");
                 }
             }
-            else{
-                setTimeout(function(){
-                url = data;
-                $(location).attr('href',url);
-                },200);
-            }
         });
     });
 });
