@@ -178,6 +178,7 @@ get %r{^/([abc][123])?$} do |human|
     pp session
     result = "illegal"
   end
+  puts result
   result
 end
 

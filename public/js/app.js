@@ -4,7 +4,7 @@ $(document).ready(function(){
         var ruta = pathname + event.target.id;
         $.get(ruta, function(data) {
             if (data == 'illegal'){
-                alert("Illegal move!")
+                alert("Illegal move!");
                 } 
             else if (data.length < 3)  {
                 if (data.length > 0){
