@@ -15,6 +15,13 @@ $(document).ready(function(){
                     alert("Casilla Ocupada, Escoja Otra");
                 }
             }
+            else{ //Redirección a la página de ganar, empate o perder.
+                setTimeout(function(){
+                url = data;
+                $(location).attr('href',url);
+                },200);
+            }
         });
     });
 });
+
